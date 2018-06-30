@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+::selection {
+    background: #ffd200;
+}
+
+html {
+    background: #115e7b;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #115e7b 0%, #0097b0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #115e7b), color-stop(100%, #0097b0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #115e7b 0%, #0097b0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #115e7b 0%, #0097b0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #115e7b 0%, #0097b0 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #115e7b 0%, #0097b0 100%);
+    /* W3C */
+    height: 100%;
+    -webkit-background-size: 100% 200%;
+    -moz-background-size: 100% 200%;
+    -o-background-size: 100% 200%;
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+}
+
+html, b ody {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.heroHead {
+    color: white;
+    font: 64px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: 700;
+    line-height: 58.8px !important;
+    display: block;
+    padding: 30px;
+}
+
+.button {
+    font: 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: 300;
+    margin-left: -10px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.4)
+}
+
+.button:active {
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.rightSide {
+    float: right;
+    position: relative;
+}
+
+.cardContainer {
+    position: relative;
+    margin: 0 auto;
+    display: inline-block;
+    margin: 10px;
+}
+
+.card {
+    height: 378px;
+    width: 270px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 16px 333px;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.card .cardText {
+    font: 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: 700;
+    padding: 18px 20px;
+}
+
+.card.white .cardText, .card.white .cardTextInput {
+    color: black;
+}
+
+.card.black .cardText, .card.black .cardTextInput {
+    color: white;
+}
+
+.card .cardBrand {
+    display: block;
+    bottom: 0;
+    position: absolute;
+    font: 9px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: 700;
+    padding: 28px 0 28px 22px;
+}
+
+.card .cardBrand i {
+  font-size: 150%;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+
+.card.black {
+  color: white;
+}
+
+.card.white {
+  color: black;
+}
+
+.cardTextInput {
+    background-color: transparent;
+    font: 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: 700;
+    padding: 18px 20px;
+    width: 230px;
+    height: 342px;
+    border: none;
+    box-sizing: content-box;
+    resize: none;
+    margin-top: -36px;
+    overflow: hidden;
+}
+
+.cardTextInput:focus {
+    outline: none;
+}
+
+.generator {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 18px 36px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 460px) {}
+
+@media (max-width: 400px) {
+    .heroHead {
+        font-size: 40px;
+        line-height: 36.75px !important;
+    }
+}

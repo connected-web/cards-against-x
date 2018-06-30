@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>CAX Template</title>
+    <link rel="stylesheet" type="text/css" href="cards.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    const zoomLevels = ['100', '150', '200']
+    $(() => {
+      $gen = $('.generator')
+      zoomLevels.forEach((zoomLevel) => {
+        $(`.button.b${zoomLevel}pc`).click(() => {
+          $gen.animate({
+            zoom: `${zoomLevel}%`
+          }, 500)
+          // $gen.css('zoom', `${zoomLevel}%`)
+        })
+      })
+    })
+    </script>
+
+</head>
+
+<body>
+    <div class="heroHead">Cards Against X</div>
+    <div class="buttons">
+      <div class="button b100pc">1.0x</div>
+      <div class="button b150pc">1.5x</div>
+      <div class="button b200pc">2.0x</div>
+    </div>
+    <div class="generator">
+        <div class="cardContainer">
+            <div class="card cardGen black">
+                <div class="cardText"></div>
+                <textarea class="cardTextInput" placeholder="Your excellent card text here." maxlength="140"></textarea>
+                <div class="cardBrand"><i class="fas fa-cog"></i> Cards Against X</div>
+            </div>
+        </div>
+        <div class="cardContainer">
+            <div class="card cardGen white">
+                <div class="cardText"></div>
+                <textarea class="cardTextInput" placeholder="Your excellent card text here." maxlength="140"></textarea>
+                <div class="cardBrand"><i class="fas fa-cog"></i> Cards Against X</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
