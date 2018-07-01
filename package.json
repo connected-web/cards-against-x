@@ -4,8 +4,18 @@
   "description": "A template for themeing and rendering your own Cards Against X cards.",
   "main": "start.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "cross-env PORT=12500 && nodemon ./start.js"
   },
   "author": "Connected Web",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "nodemonConfig": {
+    "ext": "html css"
+  }
 }
