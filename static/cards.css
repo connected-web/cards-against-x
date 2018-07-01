@@ -65,9 +65,11 @@ html {
     overflow-y: scroll;
 }
 
-html, b ody {
-    max-width: 100%;
-    overflow-x: hidden;
+html, body {
+}
+
+html.renderer {
+  background: none;
 }
 
 .heroHead {
@@ -116,6 +118,7 @@ html, b ody {
 }
 
 .card {
+    position: relative;
     height: 378px;
     width: 270px;
     -webkit-border-radius: 18px;
@@ -124,7 +127,14 @@ html, b ody {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: 16px 333px;
-    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card.safearea {
+  border: 12px solid black;
+}
+
+.card.shadow {
+  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .white {
