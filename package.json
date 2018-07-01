@@ -5,13 +5,15 @@
   "main": "start.js",
   "scripts": {
     "start": "cross-env PORT=12500 && nodemon ./start.js",
-    "render": "phantomjs render.phantom.js"
+    "render": "node render.js"
   },
   "author": "Connected Web",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "phantomjs": "^2.1.7"
+    "npm": "^6.1.0",
+    "phantomjs": "^2.1.7",
+    "promise-path": "^1.2.6"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",

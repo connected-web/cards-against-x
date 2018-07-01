@@ -130,7 +130,7 @@ html.renderer {
 }
 
 .card.safearea {
-  border: 12px solid black;
+  padding: 20px;
 }
 
 .card.shadow {
@@ -169,7 +169,7 @@ html.renderer {
 }
 
 .card .cardBrand i {
-  font-size: 150%;
+  font-size: 180%;
   vertical-align: middle;
   margin: 0 5px 0 0;
 }
