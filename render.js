@@ -7,7 +7,7 @@ const workItems = wordList.map((word, n) => {
   const cardId = n
   console.log(`[Render] Creating work for card ${cardId}: "${word}"`)
   return () => {
-    console.log(`[Render] Working on card card ${cardId}: "${word}"`)
+    console.log(`[Render] Working on card ${cardId}: "${word}"`)
     return run(`phantomjs render.phantom.js ${cardId} http://localhost:${process.env.PORT}`)
   }
 })

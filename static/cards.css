@@ -159,7 +159,7 @@ html.renderer {
     color: white;
 }
 
-.card .cardBrand {
+.cardBrand {
     display: block;
     bottom: 0;
     position: absolute;
@@ -168,10 +168,22 @@ html.renderer {
     padding: 28px 0 28px 22px;
 }
 
-.card .cardBrand i {
-  font-size: 180%;
+.cardBrand .icon {
+  display: inline-block;
   vertical-align: middle;
-  margin: 0 5px 0 0;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.cardBrand span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
 }
 
 .card.black {
