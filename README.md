@@ -32,7 +32,6 @@ After starting the server, visit: <http://localhost:12500/card/black/0/> and <ht
 
 These two pages share the same CSS from cards.css to present the same designs in different styles.
 
-
 ### Rendering
 
 To run the **renderer** against the **card templates** using the **word lists**:
@@ -43,15 +42,17 @@ To run the **renderer** against the **card templates** using the **word lists**:
 
 These milestones highlight the current path of the project:
 
--   :heavy_check_mark: Create a basic HTML / CSS template
--   :heavy_check_mark: Create a Github project
--   :heavy_check_mark: Create local hosting solution for previewing changes
--   :heavy_check_mark: Add phantomjs support to render template to PNG
--   :heavy_check_mark: Feed template with data from text files
--   :heavy_check_mark: Render multiple images using data from text files
--   :heavy_check_mark: Support multiple templates using data from different text files
--   :x: Add more template variables such as Card Brand and Icon
--   :x: Support Pick 2 card types using separate word list
+| :question:         | Milestone                                                       |
+| ------------------ | --------------------------------------------------------------- |
+| :heavy_check_mark: | Create a basic HTML / CSS template                              |
+| :heavy_check_mark: | Create a Github project                                         |
+| :heavy_check_mark: | Create local hosting solution for previewing changes            |
+| :heavy_check_mark: | Add phantomjs support to render template to PNG                 |
+| :heavy_check_mark: | Feed template with data from text files                         |
+| :heavy_check_mark: | Render multiple images using data from text files               |
+| :heavy_check_mark: | Support multiple templates using data from different text files |
+| :x:                | Add more template variables such as Card Brand and Icon         |
+| :x:                | Support Pick 2 card types using separate word list              |
 
 ## More Info
 
