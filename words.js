@@ -1,8 +1,15 @@
 const fs = require('fs')
-
+const path = require('path')
 const NL = '\n'
-const wordFile = './card-words.txt'
-const wordText = fs.readFileSync(wordFile, 'utf8')
-const wordList = wordText.split(NL).map(n => n.trim()).filter(n => n)
 
-module.exports = wordList
+function readWords(filepath) {
+  const wordText = fs.readFileSync(filepath, 'utf8')
+  const wordList = wordText.split(NL).map(n => n.trim()).filter(n => n)
+
+  return wordList
+}
+
+module.exports = {
+  black: readWords(path.join(__dirname, '/words/black-words.txt')),
+  white: readWords(path.join(__dirname, '/words/white-words.txt'))
+}

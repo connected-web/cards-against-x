@@ -151,11 +151,11 @@ html.renderer {
     padding: 18px 20px;
 }
 
-.card.white .cardText, .card.white .cardTextInput {
+.card.white {
     color: black;
 }
 
-.card.black .cardText, .card.black .cardTextInput {
+.card.black {
     color: white;
 }
 
@@ -179,6 +179,14 @@ html.renderer {
   margin-right: 5px;
 }
 
+.white .icon {
+  background-image: url('/static/icon-bw.png');
+}
+
+.black .icon {
+  background-image: url('/static/icon-wb.png');
+}
+
 .cardBrand span {
   display: inline-block;
   vertical-align: middle;
@@ -186,11 +194,11 @@ html.renderer {
   margin: 0;
 }
 
-.card.black {
+.black .card {
   color: white;
 }
 
-.card.white {
+.white .card {
   color: black;
 }
 

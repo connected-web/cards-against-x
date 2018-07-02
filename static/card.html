@@ -13,10 +13,9 @@
 <body>
   <!-- Target size: 822 x 1122 px (300DPI) with 36 px boder safe area on each side -->
     <div class="render area" style="zoom: 304%">
-        <div class="card cardGen black safearea">
-            <div class="cardText"></div>
-            <textarea class="cardTextInput" maxlength="140">{{cardText}}</textarea>
-            <div class="cardBrand"><i class="icon" style="background-image: url('/static/icon-wb.png')"></i><span>Cards Against X</span></div>
+        <div class="card cardGen safearea {{cardType}}">
+            <div class="cardText">{{cardText}}</div>
+            <div class="cardBrand"><i class="icon"></i><span>Cards Against X</span></div>
         </div>
     </div>
 </body>

@@ -1,7 +1,7 @@
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
-const wordList = require('./words')
+const words = require('./words')
 
 const port = process.env.PORT || 12500
 
@@ -16,12 +16,20 @@ const serverReadyPromise = new Promise((accept, reject) => {
 
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
-app.get('/card/:cardId', (req, res) => {
+app.get('/card/:cardType/:cardId', (req, res) => {
   const cardId = req.params.cardId
+  const cardType = req.params.cardType
   console.log(`[CAX] Generating card ${cardId}`)
-  const cardText = wordList[cardId]
-  let cardHtml = template.replace('{{cardText}}', cardText)
-  res.send(cardHtml)
+  try {
+    const cardText = words[cardType][cardId]
+    let cardHtml = template
+      .replace('{{cardText}}', cardText)
+      .replace('{{cardType}}', cardType)
+    res.send(cardHtml)
+  }
+  catch (ex) {
+    res.send(`[CAX] Unknown card:` + JSON.stringify({cardType, cardId}))
+  }
 })
 
 app.listen(port, (err, success) => {

@@ -19,11 +19,12 @@ function zp(num, len) {
   return result
 }
 
-var cardId = args[1]
-var serverUrl = args[2]
+var cardType = args[1]
+var cardId = args[2]
+var serverUrl = args[3]
 
-var sourceUrl = serverUrl + '/card/' + cardId
-var outputFilepath = './rendered/card-' + zp(cardId, 4) + '.png'
+var sourceUrl = serverUrl + '/card/' + cardType + '/' + cardId
+var outputFilepath = './rendered/' + cardType + '-card-' + zp(cardId, 4) + '.png'
 
 console.log('[Phantom Render] Setting up for card', zp(cardId, 4), 'from', sourceUrl)
 
