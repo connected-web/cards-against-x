@@ -42,7 +42,7 @@ To run the **renderer** against the **card templates** using the **word lists**:
 
 These milestones highlight the current path of the project:
 
-| :question:         | Milestone                                                       |
+| :collision:        | Milestone                                                       |
 | ------------------ | --------------------------------------------------------------- |
 | :heavy_check_mark: | Create a basic HTML / CSS template                              |
 | :heavy_check_mark: | Create a Github project                                         |
