@@ -14,7 +14,7 @@ function createWorkItems(cardType, wordList) {
     console.log(`[Render] Creating work for card ${cardId}: "${word}"`)
     return () => {
       console.log(`[Render] Working on card ${cardId}: "${word}"`)
-      return run(`phantomjs render.phantom.js ${cardType} ${cardId} http://localhost:${process.env.PORT}`)
+      return run(`npm run render:x render.phantom.js ${cardType} ${cardId} http://localhost:${process.env.PORT}`)
     }
   })
 }
