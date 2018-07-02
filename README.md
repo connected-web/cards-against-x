@@ -22,6 +22,16 @@ This project is made up of the following components:
 
 ## Supported Commands
 
+### Setup
+
+Before you begin; make sure you have **[node js](https://nodejs.org/en/)** and **[npm](https://www.npmjs.com/get-npm)** installed.
+
+Checkout the source code for **cards-against-x** to your local machine; then from the same directory as **./package.json** run:
+
+    npm install
+
+This will install **phantomjs** for your operating system, express, and other libraries required to run the renderer.
+
 ### Local Hosting
 
 Host the server for rendering cards:
@@ -37,6 +47,8 @@ These two pages share the same CSS from cards.css to present the same designs in
 To run the **renderer** against the **card templates** using the **word lists**:
 
     npm run render
+
+This will create a series of PNG files in the **./rendered/** folder inside the project.
 
 ## Milestones
 
