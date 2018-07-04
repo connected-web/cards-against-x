@@ -10,10 +10,10 @@ function readWords(filepath) {
 }
 
 const wordLists = {
-  frontBlack: readWords(path.join(__dirname, '/black-words.txt')),
-  frontWhite: readWords(path.join(__dirname, '/white-words.txt')),
-  backBlack: ['Cards Against X'],
-  backWhite: ['Cards Against X']
+  'front-black': readWords(path.join(__dirname, '/black-words.txt')),
+  'front-white': readWords(path.join(__dirname, '/white-words.txt')),
+  'back-black': ['Cards Against X'],
+  'back-white': ['Cards Against X']
 }
 
 module.exports = {

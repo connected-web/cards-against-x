@@ -137,11 +137,11 @@ html.renderer {
   box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.white {
+.back-white, .front-white {
     background-color: white;
 }
 
-.black {
+.back-black, .front-black {
     background-color: black;
 }
 
@@ -151,11 +151,11 @@ html.renderer {
     padding: 18px 20px;
 }
 
-.card.white {
+.card.front-white, .card.back-white {
     color: black;
 }
 
-.card.black {
+.card.front-black, .card.back-black {
     color: white;
 }
 
@@ -179,11 +179,11 @@ html.renderer {
   margin-right: 5px;
 }
 
-.white .icon {
+.front-white .icon, .back-white .icon {
   background-image: url('/static/icon-bw.png');
 }
 
-.black .icon {
+.front-black .icon, .back-black .icon {
   background-image: url('/static/icon-wb.png');
 }
 
@@ -194,11 +194,11 @@ html.renderer {
   margin: 0;
 }
 
-.black .card {
+.front-black .card, .back-black .card {
   color: white;
 }
 
-.white .card {
+.front-white .card, .back-white .card { {
   color: black;
 }
 

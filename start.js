@@ -16,10 +16,10 @@ const serverReadyPromise = new Promise((accept, reject) => {
 })
 
 const cardTemplates = {
-  frontBlack: cardTemplateFront,
-  frontWhite: cardTemplateFront,
-  backBlack: cardTemplateBack,
-  backWhite: cardTemplateBack
+  'front-black': cardTemplateFront,
+  'front-white': cardTemplateFront,
+  'back-black': cardTemplateBack,
+  'back-white': cardTemplateBack
 }
 
 app.use('/static', express.static(path.join(__dirname, 'static')))
