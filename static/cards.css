@@ -151,6 +151,10 @@ html.renderer {
     padding: 18px 20px;
 }
 
+.card .cardText.big {
+  font-size: 34px;
+}
+
 .card.front-white, .card.back-white {
     color: black;
 }
@@ -168,7 +172,7 @@ html.renderer {
     padding: 28px 0 28px 22px;
 }
 
-.cardBrand .icon {
+.card .icon {
   display: inline-block;
   vertical-align: middle;
   width: 14px;
@@ -177,6 +181,11 @@ html.renderer {
   background-position: center center;
   background-size: contain;
   margin-right: 5px;
+}
+
+.card .big .icon {
+  width: 36px;
+  height: 36px;
 }
 
 .front-white .icon, .back-white .icon {
