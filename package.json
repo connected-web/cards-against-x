@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "cross-env PORT=12500 && nodemon ./start.js",
-    "render": "node render.js",
+    "render": "rm rendered/*.png && node render.js",
     "render:x": "phantomjs"
   },
   "author": "Connected Web",
