@@ -1,12 +1,13 @@
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
-const words = require('./words')
+const words = require('./words/words')
 
 const port = process.env.PORT || 12500
 
 const app = express()
-const template = fs.readFileSync('./static/card.html', 'utf8')
+const cardTemplateFront = fs.readFileSync('./static/card-front.html', 'utf8')
+const cardTemplateBack = fs.readFileSync('./static/card-back.html', 'utf8')
 
 let serverReadyAccept, serverReadyReject
 const serverReadyPromise = new Promise((accept, reject) => {
@@ -14,14 +15,22 @@ const serverReadyPromise = new Promise((accept, reject) => {
   serverReadyReject = reject
 })
 
+const cardTemplates = {
+  'front-black': cardTemplateFront,
+  'front-white': cardTemplateFront,
+  'back-black': cardTemplateBack,
+  'back-white': cardTemplateBack
+}
+
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
 app.get('/card/:cardType/:cardId', (req, res) => {
   const cardId = req.params.cardId
   const cardType = req.params.cardType
+  const template = cardTemplates[cardType]
   console.log(`[CAX] Generating card ${cardId}`)
   try {
-    const cardText = words[cardType][cardId]
+    const cardText = words.list(cardType)[cardId]
     let cardHtml = template
       .replace('{{cardText}}', cardText)
       .replace('{{cardType}}', cardType)

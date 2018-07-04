@@ -137,11 +137,11 @@ html.renderer {
   box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.white {
+.back-white, .front-white {
     background-color: white;
 }
 
-.black {
+.back-black, .front-black {
     background-color: black;
 }
 
@@ -151,11 +151,15 @@ html.renderer {
     padding: 18px 20px;
 }
 
-.card.white {
+.card .cardText.big {
+  font-size: 34px;
+}
+
+.card.front-white, .card.back-white {
     color: black;
 }
 
-.card.black {
+.card.front-black, .card.back-black {
     color: white;
 }
 
@@ -165,10 +169,10 @@ html.renderer {
     position: absolute;
     font: 9px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     font-weight: 700;
-    padding: 28px 0 28px 22px;
+    padding: 36px 0 36px 26px;
 }
 
-.cardBrand .icon {
+.card .icon {
   display: inline-block;
   vertical-align: middle;
   width: 14px;
@@ -179,11 +183,16 @@ html.renderer {
   margin-right: 5px;
 }
 
-.white .icon {
+.card .big .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.front-white .icon, .back-white .icon {
   background-image: url('/static/icon-bw.png');
 }
 
-.black .icon {
+.front-black .icon, .back-black .icon {
   background-image: url('/static/icon-wb.png');
 }
 
@@ -194,11 +203,11 @@ html.renderer {
   margin: 0;
 }
 
-.black .card {
+.front-black .card, .back-black .card {
   color: white;
 }
 
-.white .card {
+.front-white .card, .back-white .card { {
   color: black;
 }
 
