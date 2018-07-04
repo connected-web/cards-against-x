@@ -1,10 +1,10 @@
 const { run } = require('promise-path')
-const words = require('./words')
+const words = require('./words/words')
 
 process.env.PORT = Math.round(1000 * Math.random()) + 12000
 
-const workItems = Object.keys(words).reduce((res, item) => {
-  const newItems = createWorkItems(item, words[item])
+const workItems = words.types().reduce((res, type) => {
+  const newItems = createWorkItems(type, words.list(type))
   return res.concat(newItems)
 }, [])
 
