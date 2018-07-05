@@ -13,13 +13,17 @@ A template for themeing and rendering your own _Cards Against X_ cards for print
 
 These are some sample renders at full print resolution (300 dpi); scaled down to fit visually. Additional padding has been added to create a safe printing area around the card text and icons.
 
-<img src="samples/back-black-card-sample.png" width="150px" alt="Sample card - back black" />
-<img src="samples/back-white-card-sample.png" width="150px" alt="Sample card - back white" />
+| Back in Black | Back in White |
+| - | - |
+| <img src="samples/back-black-card-sample.png" width="150px" alt="Sample card - back black" /> | <img src="samples/back-white-card-sample.png" width="150px" alt="Sample card - back white" /> |
 
-<img src="samples/front-black-pick1-card-sample.png" width="150px" alt="Sample card - back black pick 1" />
-<img src="samples/front-black-pick2-card-sample.png" width="150px" alt="Sample card - back black pick 2" />
-<img src="samples/front-black-pick3-card-sample.png" width="150px" alt="Sample card - back black draw 2, pick 3" />
-<img src="samples/front-white-card-sample.png" width="150px" alt="Sample card - front white" />
+| Pick 1 | Pick 2 | Draw 2, Pick 3 |
+| - | - | - |
+| <img src="samples/front-black-pick1-card-sample.png" width="150px" alt="Sample card - back black pick 1" /> | <img src="samples/front-black-pick2-card-sample.png" width="150px" alt="Sample card - back black pick 2" /> |<img src="samples/front-black-pick3-card-sample.png" width="150px" alt="Sample card - back black draw 2, pick 3" />
+
+| White |
+| - |
+| <img src="samples/front-white-card-sample.png" width="150px" alt="Sample card - front white" /> |
 
 ## Key Concepts
 
