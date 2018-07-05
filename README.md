@@ -77,8 +77,9 @@ These milestones highlight the current path of the project:
 | :heavy_check_mark: | Feed template with data from text files                         |
 | :heavy_check_mark: | Render multiple images using data from text files               |
 | :heavy_check_mark: | Support multiple templates using data from different text files |
-| :x:                | Add more template variables such as Card Brand and Icon         |
-| :x:                | Support Pick 2 card types using separate word list              |
+| :heavy_check_mark: | Add more template variables for project title                   |
+| :heavy_check_mark: | Support Pick 2 card types using separate word list              |
+| :heavy_check_mark: | Support Draw 2, Pick 3 card types using separate word list      |
 
 ## More Info
 
