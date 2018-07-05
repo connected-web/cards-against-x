@@ -165,11 +165,12 @@ html.renderer {
 
 .cardBrand {
     display: block;
+    left: 0;
     bottom: 0;
     position: absolute;
     font: 9px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     font-weight: 700;
-    padding: 36px 0 36px 26px;
+    padding: 36px 0 36px 36px;
 }
 
 .card .icon {
@@ -207,8 +208,59 @@ html.renderer {
   color: white;
 }
 
-.white .card { {
+.white .card {
   color: black;
+}
+
+.cardPick {
+  display: none;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  font: 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 700;
+  padding: 36px 36px 36px 0;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.circle {
+  font-size: 90%;
+  display: inline-block;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: 5px 0;
+}
+
+.pick {
+  vertical-align: middle;
+}
+
+.black .circle {
+  background: white;
+  color: black;
+}
+
+.white .circle {
+  background: black;
+  color: white;
+}
+
+.pick1 .cardPick.one {
+  display: block;
+}
+
+.pick2 .cardPick.two {
+  display: block;
+}
+
+.pick3 .cardPick.three {
+  display: block;
 }
 
 .cardTextInput {
