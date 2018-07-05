@@ -54,9 +54,7 @@ Host the server for rendering cards:
 
     npm start
 
-After starting the server, visit: <http://localhost:12500/card/black/0/> and <http://localhost:12500/card/white/0/> to see examples of templates that will be rendered.
-
-These two pages share the same CSS from cards.css to present the same designs in different styles.
+After starting the server, visit the URLs printed in the console to see examples of cards that will be rendered.
 
 ### Rendering
 
