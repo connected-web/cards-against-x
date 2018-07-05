@@ -16,7 +16,9 @@ const serverReadyPromise = new Promise((accept, reject) => {
 })
 
 const cardTemplates = {
-  'front-black': cardTemplateFront,
+  'front-black-pick1': cardTemplateFront,
+  'front-black-pick2': cardTemplateFront,
+  'front-black-pick3': cardTemplateFront,
   'front-white': cardTemplateFront,
   'back-black': cardTemplateBack,
   'back-white': cardTemplateBack
@@ -30,10 +32,12 @@ app.get('/card/:cardType/:cardId', (req, res) => {
   const template = cardTemplates[cardType]
   console.log(`[CAX] Generating card ${cardId}`)
   try {
+    const wordGroup = words.get(cardType)
     const cardText = words.list(cardType)[cardId]
     let cardHtml = template
-      .replace('{{cardText}}', cardText)
-      .replace('{{cardType}}', cardType)
+      .replace(/{{cardText}}/g, cardText)
+      .replace(/{{cardType}}/g, cardType)
+      .replace(/{{cardClasses}}/g, wordGroup.classes.join(' '))
     res.send(cardHtml)
   }
   catch (ex) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="renderer">
+<html class="renderer {{cardType}}">
 
 <head>
     <title>CAX Template</title>
@@ -12,7 +12,7 @@
 <body>
   <!-- Target size: 822 x 1122 px (300DPI) with 36 px boder safe area on each side -->
     <div class="render area" style="zoom: 304%">
-        <div class="card cardGen safearea {{cardType}}">
+        <div class="card cardGen safearea {{cardClasses}}">
             <div class="cardText">{{cardText}}</div>
             <div class="cardBrand"><i class="icon"></i><span>Cards Against X</span></div>
         </div>

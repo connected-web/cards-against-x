@@ -137,11 +137,11 @@ html.renderer {
   box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.back-white, .front-white {
+.white {
     background-color: white;
 }
 
-.back-black, .front-black {
+.black {
     background-color: black;
 }
 
@@ -155,11 +155,11 @@ html.renderer {
   font-size: 34px;
 }
 
-.card.front-white, .card.back-white {
+.card.white {
     color: black;
 }
 
-.card.front-black, .card.back-black {
+.card.black {
     color: white;
 }
 
@@ -188,11 +188,11 @@ html.renderer {
   height: 36px;
 }
 
-.front-white .icon, .back-white .icon {
+.white .icon {
   background-image: url('/static/icon-bw.png');
 }
 
-.front-black .icon, .back-black .icon {
+.black .icon {
   background-image: url('/static/icon-wb.png');
 }
 
@@ -203,11 +203,11 @@ html.renderer {
   margin: 0;
 }
 
-.front-black .card, .back-black .card {
+.black .card {
   color: white;
 }
 
-.front-white .card, .back-white .card { {
+.white .card { {
   color: black;
 }
 

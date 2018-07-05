@@ -10,13 +10,42 @@ function readWords(filepath) {
 }
 
 const wordLists = {
-  'front-black': readWords(path.join(__dirname, '/black-words.txt')),
-  'front-white': readWords(path.join(__dirname, '/white-words.txt')),
-  'back-black': ['Cards Against X'],
-  'back-white': ['Cards Against X']
+  'front-black-pick1': {
+    words: readWords(path.join(__dirname, '/black-words-pick1.txt')),
+    classes: ['front', 'black', 'pick1']
+  },
+  'front-black-pick2': {
+    words: readWords(path.join(__dirname, '/black-words-pick2.txt')),
+    classes: ['front', 'black', 'pick2']
+  },
+  'front-black-pick3': {
+    words: readWords(path.join(__dirname, '/black-words-pick3.txt')),
+    classes: ['front', 'black', 'pick3']
+  },
+  'front-white': {
+    words: readWords(path.join(__dirname, '/white-words.txt')),
+    classes: ['front', 'white']
+  },
+  'back-black': {
+    words: ['Cards Against X'],
+    classes: ['back', 'black']
+  },
+  'back-white': {
+    words: ['Cards Against X'],
+    classes: ['back', 'white']
+  }
+}
+
+function get(type) {
+  return wordLists[type] || {}
+}
+
+function list(type) {
+  return get(type).words || []
 }
 
 module.exports = {
-  list: (type) => { return wordLists[type] || [] },
+  get,
+  list,
   types: () => Object.keys(wordLists)
 }

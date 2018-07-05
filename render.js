@@ -1,4 +1,4 @@
-const { run } = require('promise-path')
+const { run, clean } = require('promise-path')
 const words = require('./words/words')
 
 process.env.PORT = Math.round(1000 * Math.random()) + 12000
@@ -33,5 +33,6 @@ async function processWork(workItems) {
   }
 }
 
-processWork(workItems)
+clean('./rendered/*.png')
+  .then(() => processWork(workItems))
   .then(() => process.exit())
