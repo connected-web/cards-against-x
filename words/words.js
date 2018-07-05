@@ -1,5 +1,8 @@
 const fs = require('fs')
 const path = require('path')
+
+const project = require('../package.json')
+
 const NL = '\n'
 
 function readWords(filepath) {
@@ -27,11 +30,11 @@ const wordLists = {
     classes: ['front', 'white']
   },
   'back-black': {
-    words: ['Cards Against X'],
+    words: [project.title],
     classes: ['back', 'black']
   },
   'back-white': {
-    words: ['Cards Against X'],
+    words: [project.title],
     classes: ['back', 'white']
   }
 }

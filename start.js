@@ -1,7 +1,9 @@
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
+
 const words = require('./words/words')
+const project = require('./package.json')
 
 const port = process.env.PORT || 12500
 
@@ -38,6 +40,7 @@ app.get('/card/:cardType/:cardId', (req, res) => {
       .replace(/{{cardText}}/g, cardText)
       .replace(/{{cardType}}/g, cardType)
       .replace(/{{cardClasses}}/g, wordGroup.classes.join(' '))
+      .replace(/{{projectTitle}}/g, project.title)
     res.send(cardHtml)
   }
   catch (ex) {
