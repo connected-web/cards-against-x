@@ -3,9 +3,9 @@
   "title": "Cards Against X",
   "version": "0.1.0",
   "description": "A template for themeing and rendering your own CAX cards.",
-  "main": "start.js",
+  "main": "words/words.js",
   "scripts": {
-    "start": "cross-env PORT=12500 && nodemon ./start.js",
+    "start": "cross-env PORT=12500 && nodemon ./local-server.js",
     "render": "node render.js",
     "render:x": "phantomjs"
   },
