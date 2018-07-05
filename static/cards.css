@@ -230,10 +230,10 @@ html.renderer {
   border-radius: 20px;
   width: 20px;
   height: 20px;
-  padding: 2px;
   text-align: center;
   overflow: hidden;
   vertical-align: middle;
+  padding: 1px 2px 3px 2px;
   margin: 5px 0;
 }
 
