@@ -7,7 +7,7 @@ const cardTemplateBack = fs.readFileSync(path.join(__dirname, '../static/card-ba
 
 const NL = '\n'
 
-function readWords(filepath) {
+function readWords (filepath) {
   const wordText = fs.readFileSync(filepath, 'utf8')
   const wordList = wordText.split(NL).map(n => n.trim()).filter(n => n)
 
@@ -47,11 +47,11 @@ const wordLists = {
   }
 }
 
-function get(type) {
+function get (type) {
   return wordLists[type] || {}
 }
 
-function list(type) {
+function list (type) {
   return get(type).words || []
 }
 

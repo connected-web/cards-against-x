@@ -7,7 +7,8 @@
   "scripts": {
     "start": "cross-env PORT=12500 && nodemon ./local-server.js",
     "render": "node render.js",
-    "render:x": "phantomjs"
+    "render:x": "phantomjs",
+    "lint": "standard --fix"
   },
   "author": "Connected Web",
   "license": "ISC",
@@ -19,7 +20,8 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "standard": "^11.0.1"
   },
   "nodemonConfig": {
     "ext": "html css"

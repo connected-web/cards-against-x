@@ -1,5 +1,4 @@
 const express = require('express')
-const fs = require('fs')
 const path = require('path')
 
 const words = require('./words/words')
@@ -9,9 +8,9 @@ const port = process.env.PORT || 12500
 
 const app = express()
 
-let serverReadyAccept, serverReadyReject
-const serverReadyPromise = new Promise((accept, reject) => {
-  serverReadyAccept = accept
+let serverReadyResolve, serverReadyReject
+const serverReadyPromise = new Promise((resolve, reject) => {
+  serverReadyResolve = resolve
   serverReadyReject = reject
 })
 
@@ -31,14 +30,13 @@ app.get('/card/:cardType/:cardId', (req, res) => {
       .replace(/{{cardClasses}}/g, wordGroup.classes.join(' '))
       .replace(/{{projectTitle}}/g, project.title)
     res.send(cardHtml)
-  }
-  catch (ex) {
+  } catch (ex) {
     res.send(`[CAX] Unknown card:` + JSON.stringify({cardType, cardId}))
   }
 })
 
 app.listen(port, (err, success) => {
-  if(err) {
+  if (err) {
     console.error(`[CAX] Unable to start server on port '${port}'`)
     return serverReadyReject(err)
   }
@@ -47,7 +45,7 @@ app.listen(port, (err, success) => {
   words.types().forEach(type => {
     console.log(`[CAX]   http://localhost:${port}/card/${type}/0`)
   })
-  serverReadyAccept()
+  serverReadyResolve()
 })
 
 module.exports = serverReadyPromise

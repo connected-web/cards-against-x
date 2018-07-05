@@ -1,3 +1,4 @@
+/* global phantom */
 /* To be run with phantomjs */
 var page = require('webpage').create()
 
@@ -11,7 +12,7 @@ args.forEach(function(arg, i) {
 })
 */
 
-function zp(num, len) {
+function zp (num, len) {
   var result = '' + num
   while (result.length < len) {
     result = '0' + result
@@ -28,7 +29,7 @@ var outputFilepath = './rendered/' + cardType + '-card-' + zp(cardId, 4) + '.png
 
 console.log('[Phantom Render] Setting up for card', zp(cardId, 4), 'from', sourceUrl)
 
-page.open(sourceUrl, function() {
+page.open(sourceUrl, function () {
   page.render(outputFilepath)
   console.log('[Phantom Render] Rendered', outputFilepath, '(complete)')
   phantom.exit()

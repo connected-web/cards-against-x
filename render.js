@@ -8,7 +8,7 @@ const workItems = words.types().reduce((res, type) => {
   return res.concat(newItems)
 }, [])
 
-function createWorkItems(cardType, wordList) {
+function createWorkItems (cardType, wordList) {
   return wordList.map((word, n) => {
     const cardId = n
     console.log(`[Render] Creating work for card ${cardId}: "${word}"`)
@@ -19,16 +19,15 @@ function createWorkItems(cardType, wordList) {
   })
 }
 
-async function processWork(workItems) {
+async function processWork (workItems) {
   try {
     await require('./local-server')
-    for(const workItem of workItems) {
+    for (const workItem of workItems) {
       let result = await workItem()
       console.log(`[Render] Work ${workItems.indexOf(workItem)}`, result.stdout, result.stderr)
     }
     console.log('[Render] Work complete')
-  }
-  catch(ex) {
+  } catch (ex) {
     console.error('[Render] Error:', ex)
   }
 }
