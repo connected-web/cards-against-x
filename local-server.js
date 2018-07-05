@@ -8,8 +8,6 @@ const project = require('./package.json')
 const port = process.env.PORT || 12500
 
 const app = express()
-const cardTemplateFront = fs.readFileSync('./static/card-front.html', 'utf8')
-const cardTemplateBack = fs.readFileSync('./static/card-back.html', 'utf8')
 
 let serverReadyAccept, serverReadyReject
 const serverReadyPromise = new Promise((accept, reject) => {
@@ -17,24 +15,15 @@ const serverReadyPromise = new Promise((accept, reject) => {
   serverReadyReject = reject
 })
 
-const cardTemplates = {
-  'front-black-pick1': cardTemplateFront,
-  'front-black-pick2': cardTemplateFront,
-  'front-black-pick3': cardTemplateFront,
-  'front-white': cardTemplateFront,
-  'back-black': cardTemplateBack,
-  'back-white': cardTemplateBack
-}
-
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
 app.get('/card/:cardType/:cardId', (req, res) => {
   const cardId = req.params.cardId
   const cardType = req.params.cardType
-  const template = cardTemplates[cardType]
   console.log(`[CAX] Generating card ${cardType} ${cardId}`)
   try {
     const wordGroup = words.get(cardType)
+    const template = wordGroup.template
     const cardText = words.list(cardType)[cardId]
     let cardHtml = template
       .replace(/{{cardText}}/g, cardText)
