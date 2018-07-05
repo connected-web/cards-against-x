@@ -32,7 +32,7 @@ app.get('/card/:cardType/:cardId', (req, res) => {
   const cardId = req.params.cardId
   const cardType = req.params.cardType
   const template = cardTemplates[cardType]
-  console.log(`[CAX] Generating card ${cardId}`)
+  console.log(`[CAX] Generating card ${cardType} ${cardId}`)
   try {
     const wordGroup = words.get(cardType)
     const cardText = words.list(cardType)[cardId]
