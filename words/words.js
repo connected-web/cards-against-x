@@ -2,8 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 const project = require('../package.json')
-const cardTemplateFront = fs.readFileSync('../static/card-front.html', 'utf8')
-const cardTemplateBack = fs.readFileSync('../static/card-back.html', 'utf8')
+const cardTemplateFront = fs.readFileSync(path.join(__dirname, '../static/card-front.html'), 'utf8')
+const cardTemplateBack = fs.readFileSync(path.join(__dirname, '../static/card-back.html'), 'utf8')
 
 const NL = '\n'
 
