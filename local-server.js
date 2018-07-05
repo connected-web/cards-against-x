@@ -54,7 +54,10 @@ app.listen(port, (err, success) => {
     return serverReadyReject(err)
   }
   console.log(`[CAX] Listening on http://localhost:${port}`)
-  console.log(`[CAX] Template avaialble http://localhost:${port}/static/template.html`)
+  console.log(`[CAX] Card previews available on:`)
+  words.types().forEach(type => {
+    console.log(`[CAX]   http://localhost:${port}/card/${type}/0`)
+  })
   serverReadyAccept()
 })
 
