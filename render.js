@@ -29,9 +29,9 @@ async function processWork (workItems) {
       const result = await workItem()
       times.push(Date.now())
       const timeTaken = times[times.length - 1] - times[times.length - 2]
-      console.log(`[Render] Work ${workItems.indexOf(workItem)}`, result.stdout, result.stderr, dd(timeTaken))
+      console.log(`[Render] Work item ${workItems.indexOf(workItem)}`, result.stdout, result.stderr, dd(timeTaken))
     }
-    console.log('[Render] Work complete', dd(Date.now() - times[0]))
+    console.log('[Render] Work complete', workItems.length, 'items in', dd(Date.now() - times[0]))
   } catch (ex) {
     console.error('[Render] Error:', ex)
   }
