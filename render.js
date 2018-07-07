@@ -19,14 +19,19 @@ function createWorkItems (cardType, wordList) {
   })
 }
 
+const dd = (ms) => `${(ms / 1000)} s`
+
 async function processWork (workItems) {
+  const times = [Date.now()]
   try {
     await require('./local-server')
     for (const workItem of workItems) {
-      let result = await workItem()
-      console.log(`[Render] Work ${workItems.indexOf(workItem)}`, result.stdout, result.stderr)
+      const result = await workItem()
+      times.push(Date.now())
+      const timeTaken = times[times.length - 1] - times[times.length - 2]
+      console.log(`[Render] Work ${workItems.indexOf(workItem)}`, result.stdout, result.stderr, dd(timeTaken))
     }
-    console.log('[Render] Work complete')
+    console.log('[Render] Work complete', dd(Date.now() - times[0]))
   } catch (ex) {
     console.error('[Render] Error:', ex)
   }
