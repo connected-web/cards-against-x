@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "npm": "^6.9.0",
+    "npm": "^6.13.4",
     "phantomjs": "^2.1.7",
     "promise-path": "^1.2.6"
   },
