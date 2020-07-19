@@ -6,6 +6,7 @@
   "main": "words/words.js",
   "scripts": {
     "start": "cross-env PORT=12500 && nodemon ./local-server.js",
+    "test": "standard",
     "render": "node render.js",
     "render:x": "phantomjs",
     "lint": "standard --fix"
@@ -21,7 +22,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "nodemon": "^1.17.5",
-    "standard": "^11.0.1"
+    "standard": "^14.3.4"
   },
   "nodemonConfig": {
     "ext": "html css"

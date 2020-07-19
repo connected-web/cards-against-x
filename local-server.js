@@ -24,14 +24,14 @@ app.get('/card/:cardType/:cardId', (req, res) => {
     const wordGroup = words.get(cardType)
     const template = wordGroup.template
     const cardText = words.list(cardType)[cardId]
-    let cardHtml = template
+    const cardHtml = template
       .replace(/{{cardText}}/g, cardText)
       .replace(/{{cardType}}/g, cardType)
       .replace(/{{cardClasses}}/g, wordGroup.classes.join(' '))
       .replace(/{{projectTitle}}/g, project.title)
     res.send(cardHtml)
   } catch (ex) {
-    res.send(`[CAX] Unknown card:` + JSON.stringify({cardType, cardId}))
+    res.send('[CAX] Unknown card:' + JSON.stringify({ cardType, cardId }))
   }
 })
 
@@ -41,7 +41,7 @@ app.listen(port, (err, success) => {
     return serverReadyReject(err)
   }
   console.log(`[CAX] Listening on http://localhost:${port}`)
-  console.log(`[CAX] Card previews available on:`)
+  console.log('[CAX] Card previews available on:')
   words.types().forEach(type => {
     console.log(`[CAX]   http://localhost:${port}/card/${type}/0`)
   })
