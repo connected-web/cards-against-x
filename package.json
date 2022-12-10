@@ -14,7 +14,7 @@
   "author": "Connected Web",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "npm": "^6.14.7",
     "phantomjs": "^2.1.7",
     "promise-path": "^1.4.0"
